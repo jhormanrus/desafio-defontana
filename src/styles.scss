@@ -5,3 +5,16 @@
 @import '~@swimlane/ngx-datatable/index.css';
 @import '~@swimlane/ngx-datatable/themes/material.scss';
 @import '~@swimlane/ngx-datatable/assets/icons.css';
+
+.ngx-datatable datatable-body-row datatable-body-cell .datatable-tree-button {
+  border: unset;
+  background: unset;
+  margin-right: 0.5rem;
+  color: #66615B;
+  &:disabled {
+      opacity: 0.2;
+  }
+  i.icon {
+      display: flex;
+  }
+}

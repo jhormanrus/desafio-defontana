@@ -1,0 +1,18 @@
+<div class="border p-2 rounded-3 shadow-lg">
+  <ngx-datatable
+    class="material"
+    columnMode="force"
+    [headerHeight]="50"
+    [footerHeight]="0"
+    [scrollbarH]="true"
+    [rowHeight]="50"
+    [scrollbarV]="true"
+    treeFromRelation="Parent"
+    treeToRelation="ID"
+    [rows]="testData"
+    (treeAction)="onTreeAction($event)"
+  >
+    <ngx-datatable-column name="ID" prop="ID" [isTreeColumn]="true" [width]="300"></ngx-datatable-column>
+    <ngx-datatable-column name="Name" prop="Name"></ngx-datatable-column>
+  </ngx-datatable>    
+</div>

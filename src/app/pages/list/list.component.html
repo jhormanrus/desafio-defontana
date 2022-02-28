@@ -1,0 +1,13 @@
+<div class="bg-light border px-3 py-4 rounded-3 shadow-lg" style="height: 500px; overflow-y: auto;">
+  <ul class="m-0">
+    <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: testData }"></ng-container>
+  </ul>
+</div>
+<ng-template #recursiveList let-list>
+  <li *ngFor="let item of list">
+    {{item.Name}}
+    <ul *ngIf="item.children?.length > 0">
+      <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: item.children }"></ng-container>
+    </ul>
+  </li>
+</ng-template>
