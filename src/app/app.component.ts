@@ -12,5 +12,18 @@ import { Component } from '@angular/core';
   `]
 })
 export class AppComponent {
-  title = 'desafio-defontana';
+  navData = [
+    {
+      title: 'Ngx-datatable',
+      link: '/ngx-datatable'
+    },
+    {
+      title: 'List',
+      link: '/list'
+    },
+    {
+      title: 'JSON',
+      link: '/json'
+    }
+  ]
 }

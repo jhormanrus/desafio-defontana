@@ -3,11 +3,11 @@
 export default function ObjArrToTree(arr: any[], key: string) {
   let { res } = arr.reduce((prev, curr) => {
       if (prev.parentMap[curr[key]]){
-          (prev.parentMap[curr[key]].children = prev.parentMap[curr.parentid].children || []).push(curr)
+          (prev.parentMap[curr[key]].children = prev.parentMap[curr[key]].children || []).push(curr)
       } else {
           prev.res.push(curr);
       }
-      prev.parentMap[curr.id] = curr;
+      prev.parentMap[curr.ID] = curr;
       return prev;
   }, { parentMap: {}, res: [] })
   return res

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { take } from 'rxjs';
+import { Test } from 'src/app/models/test.model';
+import { DefontanaService } from 'src/app/services/defontana.service';
+import ObjArrToTree from '../../../utils/objArrToTree';
 
 @Component({
   selector: 'app-list',
@@ -8,9 +12,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  testData: Test[] = []
+
+  constructor(private sDefontana: DefontanaService) { }
 
   ngOnInit(): void {
+    //* Request test data
+    this.sDefontana.readTest().pipe(take(1)).subscribe(response => {
+      this.testData = ObjArrToTree(response.sort((a, b) => +a.ID - +b.ID), 'Parent')
+    })
   }
-
 }
