@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Despliegue de la solución
 
-La solución del desafío se encuentra desplegado en [Vercel](https://vercel.com/), puede visualizarlo en el siguiente enlace `https://desafio-defontana.vercel.app/`.
+La solución del desafío se encuentra desplegado en [Vercel](https://vercel.com/), puede visualizarlo en el siguiente enlace https://desafio-defontana.vercel.app/.
 
 Para levantar la solución del desafío localmente, ejecute los siguientes comandos:
 
